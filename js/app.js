@@ -160,14 +160,10 @@ app.controller('AppCtrl', ['$scope', '$mdBottomSheet','$mdSidenav', '$mdDialog',
           <div class="md-toolbar-tools pull-top-xxl">
             <span flex-gt-sm="10"></span>
             <div layout="column">
-              <div class="md-display-1">Aster Analytics</div>
+              <div class="md-display-1">Demo</div>
               <div class="md-subhead push-bottom">Etiam consequat aliquam cursus. In sodales pretium ultrices.</div>
             </div>
           </div>
-          <md-button class="md-fab md-fab md-accent md-fab-bottom-right md-whiteframe-z2 pull-bottom-sm" ui-sref="app-create" ng-click="cancel()">
-            <md-icon md-svg-icon="core:cloud-download" alt="Icon"></md-icon>
-            <md-tooltip md-direction="left">Install App</md-tooltip>
-          </md-button>
         </md-toolbar>
          <md-dialog-content class="bgc-grey-100" flex>
            <div hide-sm class="push-top-md"></div>
@@ -189,58 +185,26 @@ app.controller('AppCtrl', ['$scope', '$mdBottomSheet','$mdSidenav', '$mdDialog',
                <div flex-gt-sm="35">
                  <md-card>
                    <md-list>
-                     <md-subheader class="md-no-sticky md-transparent">Required Resources</md-subheader>
+                     <md-subheader class="md-no-sticky md-transparent">Atomic Breakdown</md-subheader>
                      <md-list-item class="md-2-line">
                        <md-icon md-svg-icon="core:view-module" alt="Icon" class="md-avatar"></md-icon>
                        <div class="md-list-item-text">
-                         <h3>12</h3>
-                         <p>CPUs</p>
+                         <h3>Button</h3>
+                         <p>atom</p>
                        </div>
                      </md-list-item>
                      <md-list-item class="md-2-line">
                        <md-icon md-svg-icon="image:center-focus-weak" alt="Icon" class="md-avatar"></md-icon>
                        <div class="md-list-item-text">
-                         <h3>24576</h3>
-                         <p>Memory</p>
+                         <h3>Card with Content</h3>
+                         <p>molecule</p>
                        </div>
                      </md-list-item>
                      <md-list-item class="md-2-line">
                        <md-icon md-svg-icon="core:settings-input-component" alt="Icon" class="md-avatar"></md-icon>
                        <div class="md-list-item-text">
-                         <h3>409600</h3>
-                         <p>Disk</p>
-                       </div>
-                     </md-list-item>
-                     <md-list-item class="md-2-line">
-                       <md-icon md-svg-icon="core:settings-input-hdmi" alt="Icon" class="md-avatar"></md-icon>
-                       <div class="md-list-item-text">
-                         <h3>100</h3>
-                         <p>Ports</p>
-                       </div>
-                     </md-list-item>
-                     <md-divider></md-divider>
-                     <md-subheader class="md-no-sticky md-transparent">Info</md-subheader>
-                     <md-list-item class="md-2-line">
-                       <md-icon md-svg-icon="core:folder" alt="Icon" class="md-avatar"></md-icon>
-                       <div class="md-list-item-text">
-                         <h3>Analytics</h3>
-                         <p>Category</p>
-                       </div>
-                     </md-list-item>
-                     <md-list-item class="md-2-line">
-                       <md-icon md-svg-icon="core:today" alt="Icon" class="md-avatar"></md-icon>
-                       <div class="md-list-item-text">
-                         <h3>Jan 20, 2015</h3>
-                         <p>Last Updated</p>
-                       </div>
-                     </md-list-item>
-                     <md-divider></md-divider>
-                     <md-subheader class="md-no-sticky md-transparent">Creator</md-subheader>
-                     <md-list-item class="md-2-line">
-                       <md-icon md-svg-icon="core:account-box" alt="Icon" class="md-avatar"></md-icon>
-                       <div class="md-list-item-text">
-                         <h3>Johnny Ringo</h3>
-                         <p>owner</p>
+                         <h3>Tabbed Toolbar Header</h3>
+                         <p>compound</p>
                        </div>
                      </md-list-item>
                    </md-list>
