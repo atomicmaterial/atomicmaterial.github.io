@@ -37,9 +37,6 @@
       </md-list>
     </md-sidenav>
     <md-content layout="row" class="relative" layout-fill role="main">
-      <md-button class="md-fab md-fab-bottom-right" aria-label="Add" ng-click="showAdd($event)">
-        <md-icon md-svg-icon="content:ic_add_24px" aria-label="Plus"></md-icon>
-      </md-button>
       <md-sidenav layout="column" layout-fill class="md-sidenav-left md-sidenav-list" md-component-id="nav" md-is-locked-open="$mdMedia('gt-sm')">
         <md-toolbar class="md-whiteframe-z1" ng-class="{'md-hue-1':showSearch}" md-scroll-shrink>
           <div class="md-toolbar-tools">
@@ -81,419 +78,14 @@
         </a>
         <md-divider ng-show="!atom"></md-divider>
       
-        <a href="/whiteframe/" ng-show="!atom" class="animate-grow">
+        <a href="/bottomsheet/" ng-show="!atom" class="animate-grow">
           <md-list-item class="md-2-line" md-ink-ripple="#64ffda">
-            <md-icon md-svg-icon="maps:ic_layers_24px" aria-label="{{item.title}}"></md-icon>
+            <md-icon md-svg-icon="action:ic_open_in_browser_24px" aria-label="{{item.title}}"></md-icon>
             <div class="md-list-item-text">
-              <h3>Whiteframe</h3>
+              <h3>Bottom Sheet</h3>
               
                 <h4>
-                  <p>A whiteframe<br>
-                </h4>
-              
-            </div>
-          </md-list-item>
-        </a>
-        <md-divider ng-show="!atom"></md-divider>
-      
-        <a href="/tooltip/" ng-show="!atom" class="animate-grow">
-          <md-list-item class="md-2-line" md-ink-ripple="#64ffda">
-            <md-icon md-svg-icon="action:ic_info_outline_24px" aria-label="{{item.title}}"></md-icon>
-            <div class="md-list-item-text">
-              <h3>Tooltip</h3>
-              
-                <h4>
-                  <p>A tooltip<br>
-                </h4>
-              
-            </div>
-          </md-list-item>
-        </a>
-        <md-divider ng-show="!atom"></md-divider>
-      
-        <a href="/toolbar/" ng-show="!atom" class="animate-grow">
-          <md-list-item class="md-2-line" md-ink-ripple="#64ffda">
-            <md-icon md-svg-icon="action:ic_build_24px" aria-label="{{item.title}}"></md-icon>
-            <div class="md-list-item-text">
-              <h3>Toolbar</h3>
-              
-                <h4>
-                  <p>A toolbar<br>
-                </h4>
-              
-            </div>
-          </md-list-item>
-        </a>
-        <md-divider ng-show="!atom"></md-divider>
-      
-        <a href="/toast/" ng-show="!atom" class="animate-grow">
-          <md-list-item class="md-2-line" md-ink-ripple="#64ffda">
-            <md-icon md-svg-icon="av:ic_subtitles_24px" aria-label="{{item.title}}"></md-icon>
-            <div class="md-list-item-text">
-              <h3>Toast</h3>
-              
-                <h4>
-                  <p>A toast message<br>
-                </h4>
-              
-            </div>
-          </md-list-item>
-        </a>
-        <md-divider ng-show="!atom"></md-divider>
-      
-        <a href="/tab/" ng-show="!atom" class="animate-grow">
-          <md-list-item class="md-2-line" md-ink-ripple="#64ffda">
-            <md-icon md-svg-icon="action:ic_tab_unselected_24px" aria-label="{{item.title}}"></md-icon>
-            <div class="md-list-item-text">
-              <h3>Tab</h3>
-              
-                <h4>
-                  <p>A single tab<br>
-                </h4>
-              
-            </div>
-          </md-list-item>
-        </a>
-        <md-divider ng-show="!atom"></md-divider>
-      
-        <a href="/switch/" ng-show="!atom" class="animate-grow">
-          <md-list-item class="md-2-line" md-ink-ripple="#64ffda">
-            <md-icon md-svg-icon="av:ic_album_24px" aria-label="{{item.title}}"></md-icon>
-            <div class="md-list-item-text">
-              <h3>Switch</h3>
-              
-                <h4>
-                  <p>A switch (toggle)<br>
-                </h4>
-              
-            </div>
-          </md-list-item>
-        </a>
-        <md-divider ng-show="!atom"></md-divider>
-      
-        <a href="/swipe/" ng-show="!atom" class="animate-grow">
-          <md-list-item class="md-2-line" md-ink-ripple="#64ffda">
-            <md-icon md-svg-icon="action:ic_touch_app_24px" aria-label="{{item.title}}"></md-icon>
-            <div class="md-list-item-text">
-              <h3>Swipe</h3>
-              
-                <h4>
-                  <p>A swipe action (mobile)<br>
-                </h4>
-              
-            </div>
-          </md-list-item>
-        </a>
-        <md-divider ng-show="!atom"></md-divider>
-      
-        <a href="/subheader/" ng-show="!atom" class="animate-grow">
-          <md-list-item class="md-2-line" md-ink-ripple="#64ffda">
-            <md-icon md-svg-icon="action:ic_subject_24px" aria-label="{{item.title}}"></md-icon>
-            <div class="md-list-item-text">
-              <h3>Subheader</h3>
-              
-                <h4>
-                  <p>A subheader<br>
-                </h4>
-              
-            </div>
-          </md-list-item>
-        </a>
-        <md-divider ng-show="!atom"></md-divider>
-      
-        <a href="/slider/" ng-show="!atom" class="animate-grow">
-          <md-list-item class="md-2-line" md-ink-ripple="#64ffda">
-            <md-icon md-svg-icon="image:ic_straighten_24px" aria-label="{{item.title}}"></md-icon>
-            <div class="md-list-item-text">
-              <h3>Slider</h3>
-              
-                <h4>
-                  <p>A slider<br>
-                </h4>
-              
-            </div>
-          </md-list-item>
-        </a>
-        <md-divider ng-show="!atom"></md-divider>
-      
-        <a href="/sidenav/" ng-show="!atom" class="animate-grow">
-          <md-list-item class="md-2-line" md-ink-ripple="#64ffda">
-            <md-icon md-svg-icon="action:ic_view_quilt_24px" aria-label="{{item.title}}"></md-icon>
-            <div class="md-list-item-text">
-              <h3>Sidenav</h3>
-              
-                <h4>
-                  <p>An empty sidenav<br>
-                </h4>
-              
-            </div>
-          </md-list-item>
-        </a>
-        <md-divider ng-show="!atom"></md-divider>
-      
-        <a href="/select/" ng-show="!atom" class="animate-grow">
-          <md-list-item class="md-2-line" md-ink-ripple="#64ffda">
-            <md-icon md-svg-icon="navigation:ic_arrow_drop_down_circle_24px" aria-label="{{item.title}}"></md-icon>
-            <div class="md-list-item-text">
-              <h3>Select</h3>
-              
-                <h4>
-                  <p>A select box<br>
-                </h4>
-              
-            </div>
-          </md-list-item>
-        </a>
-        <md-divider ng-show="!atom"></md-divider>
-      
-        <a href="/radio/" ng-show="!atom" class="animate-grow">
-          <md-list-item class="md-2-line" md-ink-ripple="#64ffda">
-            <md-icon md-svg-icon="toggle:ic_radio_button_checked_24px" aria-label="{{item.title}}"></md-icon>
-            <div class="md-list-item-text">
-              <h3>Radio Button</h3>
-              
-                <h4>
-                  <p>A radio button<br>
-                </h4>
-              
-            </div>
-          </md-list-item>
-        </a>
-        <md-divider ng-show="!atom"></md-divider>
-      
-        <a href="/progresslinear/" ng-show="!atom" class="animate-grow">
-          <md-list-item class="md-2-line" md-ink-ripple="#64ffda">
-            <md-icon md-svg-icon="editor:ic_space_bar_24px" aria-label="{{item.title}}"></md-icon>
-            <div class="md-list-item-text">
-              <h3>Progress Linear</h3>
-              
-                <h4>
-                  <p>A linear progress bar<br>
-                </h4>
-              
-            </div>
-          </md-list-item>
-        </a>
-        <md-divider ng-show="!atom"></md-divider>
-      
-        <a href="/progresscircular/" ng-show="!atom" class="animate-grow">
-          <md-list-item class="md-2-line" md-ink-ripple="#64ffda">
-            <md-icon md-svg-icon="action:ic_cached_24px" aria-label="{{item.title}}"></md-icon>
-            <div class="md-list-item-text">
-              <h3>Progress Circular</h3>
-              
-                <h4>
-                  <p>A circular progress<br>
-                </h4>
-              
-            </div>
-          </md-list-item>
-        </a>
-        <md-divider ng-show="!atom"></md-divider>
-      
-        <a href="/menubar/" ng-show="!atom" class="animate-grow">
-          <md-list-item class="md-2-line" md-ink-ripple="#64ffda">
-            <md-icon md-svg-icon="action:ic_dashboard_24px" aria-label="{{item.title}}"></md-icon>
-            <div class="md-list-item-text">
-              <h3>Menu Bar</h3>
-              
-                <h4>
-                  <p>A menu bar<br>
-                </h4>
-              
-            </div>
-          </md-list-item>
-        </a>
-        <md-divider ng-show="!atom"></md-divider>
-      
-        <a href="/menu/" ng-show="!atom" class="animate-grow">
-          <md-list-item class="md-2-line" md-ink-ripple="#64ffda">
-            <md-icon md-svg-icon="image:ic_filter_frames_24px" aria-label="{{item.title}}"></md-icon>
-            <div class="md-list-item-text">
-              <h3>Menu</h3>
-              
-                <h4>
-                  <p>A dropdown menu<br>
-                </h4>
-              
-            </div>
-          </md-list-item>
-        </a>
-        <md-divider ng-show="!atom"></md-divider>
-      
-        <a href="/list/" ng-show="!atom" class="animate-grow">
-          <md-list-item class="md-2-line" md-ink-ripple="#64ffda">
-            <md-icon md-svg-icon="action:ic_view_list_24px" aria-label="{{item.title}}"></md-icon>
-            <div class="md-list-item-text">
-              <h3>List</h3>
-              
-                <h4>
-                  <p>A list<br>
-                </h4>
-              
-            </div>
-          </md-list-item>
-        </a>
-        <md-divider ng-show="!atom"></md-divider>
-      
-        <a href="/input/" ng-show="!atom" class="animate-grow">
-          <md-list-item class="md-2-line" md-ink-ripple="#64ffda">
-            <md-icon md-svg-icon="action:ic_view_day_24px" aria-label="{{item.title}}"></md-icon>
-            <div class="md-list-item-text">
-              <h3>Input</h3>
-              
-                <h4>
-                  <p>An input (text field)<br>
-                </h4>
-              
-            </div>
-          </md-list-item>
-        </a>
-        <md-divider ng-show="!atom"></md-divider>
-      
-        <a href="/icon/" ng-show="!atom" class="animate-grow">
-          <md-list-item class="md-2-line" md-ink-ripple="#64ffda">
-            <md-icon md-svg-icon="image:ic_center_focus_weak_24px" aria-label="{{item.title}}"></md-icon>
-            <div class="md-list-item-text">
-              <h3>Icon</h3>
-              
-                <h4>
-                  <p>An icon<br>
-                </h4>
-              
-            </div>
-          </md-list-item>
-        </a>
-        <md-divider ng-show="!atom"></md-divider>
-      
-        <a href="/gridlist/" ng-show="!atom" class="animate-grow">
-          <md-list-item class="md-2-line" md-ink-ripple="#64ffda">
-            <md-icon md-svg-icon="action:ic_dashboard_24px" aria-label="{{item.title}}"></md-icon>
-            <div class="md-list-item-text">
-              <h3>Grid List</h3>
-              
-                <h4>
-                  <p>A Grid List<br>
-                </h4>
-              
-            </div>
-          </md-list-item>
-        </a>
-        <md-divider ng-show="!atom"></md-divider>
-      
-        <a href="/fab/" ng-show="!atom" class="animate-grow">
-          <md-list-item class="md-2-line" md-ink-ripple="#64ffda">
-            <md-icon md-svg-icon="content:ic_add_circle_24px" aria-label="{{item.title}}"></md-icon>
-            <div class="md-list-item-text">
-              <h3>FAB</h3>
-              
-                <h4>
-                  <p>A floating action button<br>
-                </h4>
-              
-            </div>
-          </md-list-item>
-        </a>
-        <md-divider ng-show="!atom"></md-divider>
-      
-        <a href="/divider/" ng-show="!atom" class="animate-grow">
-          <md-list-item class="md-2-line" md-ink-ripple="#64ffda">
-            <md-icon md-svg-icon="content:ic_remove_24px" aria-label="{{item.title}}"></md-icon>
-            <div class="md-list-item-text">
-              <h3>Divider</h3>
-              
-                <h4>
-                  <p>A Divider<br>
-                </h4>
-              
-            </div>
-          </md-list-item>
-        </a>
-        <md-divider ng-show="!atom"></md-divider>
-      
-        <a href="/dialog/" ng-show="!atom" class="animate-grow">
-          <md-list-item class="md-2-line" md-ink-ripple="#64ffda">
-            <md-icon md-svg-icon="action:ic_announcement_24px" aria-label="{{item.title}}"></md-icon>
-            <div class="md-list-item-text">
-              <h3>Dialog</h3>
-              
-                <h4>
-                  <p>A Dialog<br>
-                </h4>
-              
-            </div>
-          </md-list-item>
-        </a>
-        <md-divider ng-show="!atom"></md-divider>
-      
-        <a href="/datepicker/" ng-show="!atom" class="animate-grow">
-          <md-list-item class="md-2-line" md-ink-ripple="#64ffda">
-            <md-icon md-svg-icon="action:ic_today_24px" aria-label="{{item.title}}"></md-icon>
-            <div class="md-list-item-text">
-              <h3>Datepicker</h3>
-              
-                <h4>
-                  <p>A Datepicker<br>
-                </h4>
-              
-            </div>
-          </md-list-item>
-        </a>
-        <md-divider ng-show="!atom"></md-divider>
-      
-        <a href="/content/" ng-show="!atom" class="animate-grow">
-          <md-list-item class="md-2-line" md-ink-ripple="#64ffda">
-            <md-icon md-svg-icon="action:ic_receipt_24px" aria-label="{{item.title}}"></md-icon>
-            <div class="md-list-item-text">
-              <h3>Content</h3>
-              
-                <h4>
-                  <p>A Content<br>
-                </h4>
-              
-            </div>
-          </md-list-item>
-        </a>
-        <md-divider ng-show="!atom"></md-divider>
-      
-        <a href="/chips/" ng-show="!atom" class="animate-grow">
-          <md-list-item class="md-2-line" md-ink-ripple="#64ffda">
-            <md-icon md-svg-icon="maps:ic_local_offer_24px" aria-label="{{item.title}}"></md-icon>
-            <div class="md-list-item-text">
-              <h3>Chips</h3>
-              
-                <h4>
-                  <p>A Chips<br>
-                </h4>
-              
-            </div>
-          </md-list-item>
-        </a>
-        <md-divider ng-show="!atom"></md-divider>
-      
-        <a href="/checkbox/" ng-show="!atom" class="animate-grow">
-          <md-list-item class="md-2-line" md-ink-ripple="#64ffda">
-            <md-icon md-svg-icon="action:ic_check_circle_24px" aria-label="{{item.title}}"></md-icon>
-            <div class="md-list-item-text">
-              <h3>Checkbox</h3>
-              
-                <h4>
-                  <p>A Checkbox<br>
-                </h4>
-              
-            </div>
-          </md-list-item>
-        </a>
-        <md-divider ng-show="!atom"></md-divider>
-      
-        <a href="/card/" ng-show="!atom" class="animate-grow">
-          <md-list-item class="md-2-line" md-ink-ripple="#64ffda">
-            <md-icon md-svg-icon="image:ic_crop_square_24px" aria-label="{{item.title}}"></md-icon>
-            <div class="md-list-item-text">
-              <h3>Card</h3>
-              
-                <h4>
-                  <p>A card<br>
+                  <p>A bottom dialog<br>
                 </h4>
               
             </div>
@@ -516,14 +108,419 @@
         </a>
         <md-divider ng-show="!atom"></md-divider>
       
-        <a href="/bottomsheet/" ng-show="!atom" class="animate-grow">
+        <a href="/card/" ng-show="!atom" class="animate-grow">
           <md-list-item class="md-2-line" md-ink-ripple="#64ffda">
-            <md-icon md-svg-icon="action:ic_open_in_browser_24px" aria-label="{{item.title}}"></md-icon>
+            <md-icon md-svg-icon="image:ic_crop_square_24px" aria-label="{{item.title}}"></md-icon>
             <div class="md-list-item-text">
-              <h3>Bottom Sheet</h3>
+              <h3>Card</h3>
               
                 <h4>
-                  <p>A bottom dialog<br>
+                  <p>A card<br>
+                </h4>
+              
+            </div>
+          </md-list-item>
+        </a>
+        <md-divider ng-show="!atom"></md-divider>
+      
+        <a href="/checkbox/" ng-show="!atom" class="animate-grow">
+          <md-list-item class="md-2-line" md-ink-ripple="#64ffda">
+            <md-icon md-svg-icon="action:ic_check_circle_24px" aria-label="{{item.title}}"></md-icon>
+            <div class="md-list-item-text">
+              <h3>Checkbox</h3>
+              
+                <h4>
+                  <p>A Checkbox<br>
+                </h4>
+              
+            </div>
+          </md-list-item>
+        </a>
+        <md-divider ng-show="!atom"></md-divider>
+      
+        <a href="/chips/" ng-show="!atom" class="animate-grow">
+          <md-list-item class="md-2-line" md-ink-ripple="#64ffda">
+            <md-icon md-svg-icon="maps:ic_local_offer_24px" aria-label="{{item.title}}"></md-icon>
+            <div class="md-list-item-text">
+              <h3>Chips</h3>
+              
+                <h4>
+                  <p>A Chips<br>
+                </h4>
+              
+            </div>
+          </md-list-item>
+        </a>
+        <md-divider ng-show="!atom"></md-divider>
+      
+        <a href="/content/" ng-show="!atom" class="animate-grow">
+          <md-list-item class="md-2-line" md-ink-ripple="#64ffda">
+            <md-icon md-svg-icon="action:ic_receipt_24px" aria-label="{{item.title}}"></md-icon>
+            <div class="md-list-item-text">
+              <h3>Content</h3>
+              
+                <h4>
+                  <p>A Content<br>
+                </h4>
+              
+            </div>
+          </md-list-item>
+        </a>
+        <md-divider ng-show="!atom"></md-divider>
+      
+        <a href="/datepicker/" ng-show="!atom" class="animate-grow">
+          <md-list-item class="md-2-line" md-ink-ripple="#64ffda">
+            <md-icon md-svg-icon="action:ic_today_24px" aria-label="{{item.title}}"></md-icon>
+            <div class="md-list-item-text">
+              <h3>Datepicker</h3>
+              
+                <h4>
+                  <p>A Datepicker<br>
+                </h4>
+              
+            </div>
+          </md-list-item>
+        </a>
+        <md-divider ng-show="!atom"></md-divider>
+      
+        <a href="/dialog/" ng-show="!atom" class="animate-grow">
+          <md-list-item class="md-2-line" md-ink-ripple="#64ffda">
+            <md-icon md-svg-icon="action:ic_announcement_24px" aria-label="{{item.title}}"></md-icon>
+            <div class="md-list-item-text">
+              <h3>Dialog</h3>
+              
+                <h4>
+                  <p>A Dialog<br>
+                </h4>
+              
+            </div>
+          </md-list-item>
+        </a>
+        <md-divider ng-show="!atom"></md-divider>
+      
+        <a href="/divider/" ng-show="!atom" class="animate-grow">
+          <md-list-item class="md-2-line" md-ink-ripple="#64ffda">
+            <md-icon md-svg-icon="content:ic_remove_24px" aria-label="{{item.title}}"></md-icon>
+            <div class="md-list-item-text">
+              <h3>Divider</h3>
+              
+                <h4>
+                  <p>A Divider<br>
+                </h4>
+              
+            </div>
+          </md-list-item>
+        </a>
+        <md-divider ng-show="!atom"></md-divider>
+      
+        <a href="/fab/" ng-show="!atom" class="animate-grow">
+          <md-list-item class="md-2-line" md-ink-ripple="#64ffda">
+            <md-icon md-svg-icon="content:ic_add_circle_24px" aria-label="{{item.title}}"></md-icon>
+            <div class="md-list-item-text">
+              <h3>FAB</h3>
+              
+                <h4>
+                  <p>A floating action button<br>
+                </h4>
+              
+            </div>
+          </md-list-item>
+        </a>
+        <md-divider ng-show="!atom"></md-divider>
+      
+        <a href="/gridlist/" ng-show="!atom" class="animate-grow">
+          <md-list-item class="md-2-line" md-ink-ripple="#64ffda">
+            <md-icon md-svg-icon="action:ic_dashboard_24px" aria-label="{{item.title}}"></md-icon>
+            <div class="md-list-item-text">
+              <h3>Grid List</h3>
+              
+                <h4>
+                  <p>A Grid List<br>
+                </h4>
+              
+            </div>
+          </md-list-item>
+        </a>
+        <md-divider ng-show="!atom"></md-divider>
+      
+        <a href="/icon/" ng-show="!atom" class="animate-grow">
+          <md-list-item class="md-2-line" md-ink-ripple="#64ffda">
+            <md-icon md-svg-icon="image:ic_center_focus_weak_24px" aria-label="{{item.title}}"></md-icon>
+            <div class="md-list-item-text">
+              <h3>Icon</h3>
+              
+                <h4>
+                  <p>An icon<br>
+                </h4>
+              
+            </div>
+          </md-list-item>
+        </a>
+        <md-divider ng-show="!atom"></md-divider>
+      
+        <a href="/input/" ng-show="!atom" class="animate-grow">
+          <md-list-item class="md-2-line" md-ink-ripple="#64ffda">
+            <md-icon md-svg-icon="action:ic_view_day_24px" aria-label="{{item.title}}"></md-icon>
+            <div class="md-list-item-text">
+              <h3>Input</h3>
+              
+                <h4>
+                  <p>An input (text field)<br>
+                </h4>
+              
+            </div>
+          </md-list-item>
+        </a>
+        <md-divider ng-show="!atom"></md-divider>
+      
+        <a href="/list/" ng-show="!atom" class="animate-grow">
+          <md-list-item class="md-2-line" md-ink-ripple="#64ffda">
+            <md-icon md-svg-icon="action:ic_view_list_24px" aria-label="{{item.title}}"></md-icon>
+            <div class="md-list-item-text">
+              <h3>List</h3>
+              
+                <h4>
+                  <p>A list<br>
+                </h4>
+              
+            </div>
+          </md-list-item>
+        </a>
+        <md-divider ng-show="!atom"></md-divider>
+      
+        <a href="/menu/" ng-show="!atom" class="animate-grow">
+          <md-list-item class="md-2-line" md-ink-ripple="#64ffda">
+            <md-icon md-svg-icon="image:ic_filter_frames_24px" aria-label="{{item.title}}"></md-icon>
+            <div class="md-list-item-text">
+              <h3>Menu</h3>
+              
+                <h4>
+                  <p>A dropdown menu<br>
+                </h4>
+              
+            </div>
+          </md-list-item>
+        </a>
+        <md-divider ng-show="!atom"></md-divider>
+      
+        <a href="/menubar/" ng-show="!atom" class="animate-grow">
+          <md-list-item class="md-2-line" md-ink-ripple="#64ffda">
+            <md-icon md-svg-icon="action:ic_dashboard_24px" aria-label="{{item.title}}"></md-icon>
+            <div class="md-list-item-text">
+              <h3>Menu Bar</h3>
+              
+                <h4>
+                  <p>A menu bar<br>
+                </h4>
+              
+            </div>
+          </md-list-item>
+        </a>
+        <md-divider ng-show="!atom"></md-divider>
+      
+        <a href="/progresscircular/" ng-show="!atom" class="animate-grow">
+          <md-list-item class="md-2-line" md-ink-ripple="#64ffda">
+            <md-icon md-svg-icon="action:ic_cached_24px" aria-label="{{item.title}}"></md-icon>
+            <div class="md-list-item-text">
+              <h3>Progress Circular</h3>
+              
+                <h4>
+                  <p>A circular progress<br>
+                </h4>
+              
+            </div>
+          </md-list-item>
+        </a>
+        <md-divider ng-show="!atom"></md-divider>
+      
+        <a href="/progresslinear/" ng-show="!atom" class="animate-grow">
+          <md-list-item class="md-2-line" md-ink-ripple="#64ffda">
+            <md-icon md-svg-icon="editor:ic_space_bar_24px" aria-label="{{item.title}}"></md-icon>
+            <div class="md-list-item-text">
+              <h3>Progress Linear</h3>
+              
+                <h4>
+                  <p>A linear progress bar<br>
+                </h4>
+              
+            </div>
+          </md-list-item>
+        </a>
+        <md-divider ng-show="!atom"></md-divider>
+      
+        <a href="/radio/" ng-show="!atom" class="animate-grow">
+          <md-list-item class="md-2-line" md-ink-ripple="#64ffda">
+            <md-icon md-svg-icon="toggle:ic_radio_button_checked_24px" aria-label="{{item.title}}"></md-icon>
+            <div class="md-list-item-text">
+              <h3>Radio Button</h3>
+              
+                <h4>
+                  <p>A radio button<br>
+                </h4>
+              
+            </div>
+          </md-list-item>
+        </a>
+        <md-divider ng-show="!atom"></md-divider>
+      
+        <a href="/select/" ng-show="!atom" class="animate-grow">
+          <md-list-item class="md-2-line" md-ink-ripple="#64ffda">
+            <md-icon md-svg-icon="navigation:ic_arrow_drop_down_circle_24px" aria-label="{{item.title}}"></md-icon>
+            <div class="md-list-item-text">
+              <h3>Select</h3>
+              
+                <h4>
+                  <p>A select box<br>
+                </h4>
+              
+            </div>
+          </md-list-item>
+        </a>
+        <md-divider ng-show="!atom"></md-divider>
+      
+        <a href="/sidenav/" ng-show="!atom" class="animate-grow">
+          <md-list-item class="md-2-line" md-ink-ripple="#64ffda">
+            <md-icon md-svg-icon="action:ic_view_quilt_24px" aria-label="{{item.title}}"></md-icon>
+            <div class="md-list-item-text">
+              <h3>Sidenav</h3>
+              
+                <h4>
+                  <p>An empty sidenav<br>
+                </h4>
+              
+            </div>
+          </md-list-item>
+        </a>
+        <md-divider ng-show="!atom"></md-divider>
+      
+        <a href="/slider/" ng-show="!atom" class="animate-grow">
+          <md-list-item class="md-2-line" md-ink-ripple="#64ffda">
+            <md-icon md-svg-icon="image:ic_straighten_24px" aria-label="{{item.title}}"></md-icon>
+            <div class="md-list-item-text">
+              <h3>Slider</h3>
+              
+                <h4>
+                  <p>A slider<br>
+                </h4>
+              
+            </div>
+          </md-list-item>
+        </a>
+        <md-divider ng-show="!atom"></md-divider>
+      
+        <a href="/subheader/" ng-show="!atom" class="animate-grow">
+          <md-list-item class="md-2-line" md-ink-ripple="#64ffda">
+            <md-icon md-svg-icon="action:ic_subject_24px" aria-label="{{item.title}}"></md-icon>
+            <div class="md-list-item-text">
+              <h3>Subheader</h3>
+              
+                <h4>
+                  <p>A subheader<br>
+                </h4>
+              
+            </div>
+          </md-list-item>
+        </a>
+        <md-divider ng-show="!atom"></md-divider>
+      
+        <a href="/swipe/" ng-show="!atom" class="animate-grow">
+          <md-list-item class="md-2-line" md-ink-ripple="#64ffda">
+            <md-icon md-svg-icon="action:ic_touch_app_24px" aria-label="{{item.title}}"></md-icon>
+            <div class="md-list-item-text">
+              <h3>Swipe</h3>
+              
+                <h4>
+                  <p>A swipe action (mobile)<br>
+                </h4>
+              
+            </div>
+          </md-list-item>
+        </a>
+        <md-divider ng-show="!atom"></md-divider>
+      
+        <a href="/switch/" ng-show="!atom" class="animate-grow">
+          <md-list-item class="md-2-line" md-ink-ripple="#64ffda">
+            <md-icon md-svg-icon="av:ic_album_24px" aria-label="{{item.title}}"></md-icon>
+            <div class="md-list-item-text">
+              <h3>Switch</h3>
+              
+                <h4>
+                  <p>A switch (toggle)<br>
+                </h4>
+              
+            </div>
+          </md-list-item>
+        </a>
+        <md-divider ng-show="!atom"></md-divider>
+      
+        <a href="/tab/" ng-show="!atom" class="animate-grow">
+          <md-list-item class="md-2-line" md-ink-ripple="#64ffda">
+            <md-icon md-svg-icon="action:ic_tab_unselected_24px" aria-label="{{item.title}}"></md-icon>
+            <div class="md-list-item-text">
+              <h3>Tab</h3>
+              
+                <h4>
+                  <p>A single tab<br>
+                </h4>
+              
+            </div>
+          </md-list-item>
+        </a>
+        <md-divider ng-show="!atom"></md-divider>
+      
+        <a href="/toast/" ng-show="!atom" class="animate-grow">
+          <md-list-item class="md-2-line" md-ink-ripple="#64ffda">
+            <md-icon md-svg-icon="av:ic_subtitles_24px" aria-label="{{item.title}}"></md-icon>
+            <div class="md-list-item-text">
+              <h3>Toast</h3>
+              
+                <h4>
+                  <p>A toast message<br>
+                </h4>
+              
+            </div>
+          </md-list-item>
+        </a>
+        <md-divider ng-show="!atom"></md-divider>
+      
+        <a href="/toolbar/" ng-show="!atom" class="animate-grow">
+          <md-list-item class="md-2-line" md-ink-ripple="#64ffda">
+            <md-icon md-svg-icon="action:ic_build_24px" aria-label="{{item.title}}"></md-icon>
+            <div class="md-list-item-text">
+              <h3>Toolbar</h3>
+              
+                <h4>
+                  <p>A toolbar<br>
+                </h4>
+              
+            </div>
+          </md-list-item>
+        </a>
+        <md-divider ng-show="!atom"></md-divider>
+      
+        <a href="/tooltip/" ng-show="!atom" class="animate-grow">
+          <md-list-item class="md-2-line" md-ink-ripple="#64ffda">
+            <md-icon md-svg-icon="action:ic_info_outline_24px" aria-label="{{item.title}}"></md-icon>
+            <div class="md-list-item-text">
+              <h3>Tooltip</h3>
+              
+                <h4>
+                  <p>A tooltip<br>
+                </h4>
+              
+            </div>
+          </md-list-item>
+        </a>
+        <md-divider ng-show="!atom"></md-divider>
+      
+        <a href="/whiteframe/" ng-show="!atom" class="animate-grow">
+          <md-list-item class="md-2-line" md-ink-ripple="#64ffda">
+            <md-icon md-svg-icon="maps:ic_layers_24px" aria-label="{{item.title}}"></md-icon>
+            <div class="md-list-item-text">
+              <h3>Whiteframe</h3>
+              
+                <h4>
+                  <p>A whiteframe<br>
                 </h4>
               
             </div>
@@ -535,17 +532,39 @@
   </section>
 
   <section>
+    <md-subheader class="md-hue-1" ng-click="compound = !compound">compound</md-subheader>
+    <md-list>
+      
+        <a href="/tabtoolbar/" ng-show="!compound" class="animate-grow">
+          <md-list-item class="md-2-line" md-ink-ripple="#64ffda">
+            <md-icon md-svg-icon="action:ic_build_24px" aria-label="{{item.title}}"></md-icon>
+            <div class="md-list-item-text">
+              <h3>Tabs Toolbar Header</h3>
+              
+                <h4>
+                  <p>A toolbar with tabs, title and icon buttons<br>
+                </h4>
+              
+            </div>
+          </md-list-item>
+        </a>
+        <md-divider ng-show="!compound"></md-divider>
+      
+    </md-list>
+  </section>
+
+  <section>
     <md-subheader class="md-hue-1" ng-click="molecule = !molecule">molecule</md-subheader>
     <md-list>
       
-        <a href="/tabs/" ng-show="!molecule" class="animate-grow">
+        <a href="/cardcontent/" ng-show="!molecule" class="animate-grow">
           <md-list-item class="md-2-line" md-ink-ripple="#64ffda">
-            <md-icon md-svg-icon="action:ic_tab_24px" aria-label="{{item.title}}"></md-icon>
+            <md-icon md-svg-icon="image:ic_crop_square_24px" aria-label="{{item.title}}"></md-icon>
             <div class="md-list-item-text">
-              <h3>Tabs</h3>
+              <h3>Card with Content</h3>
               
                 <h4>
-                  <p>A set of tabs<br>
+                  <p>A card with header, title, subhead, content and actions<br>
                 </h4>
               
             </div>
@@ -553,14 +572,14 @@
         </a>
         <md-divider ng-show="!molecule"></md-divider>
       
-        <a href="/navigationdrawer/" ng-show="!molecule" class="animate-grow">
+        <a href="/fabspeeddial/" ng-show="!molecule" class="animate-grow">
           <md-list-item class="md-2-line" md-ink-ripple="#64ffda">
-            <md-icon md-svg-icon="action:ic_dashboard_24px" aria-label="{{item.title}}"></md-icon>
+            <md-icon md-svg-icon="action:ic_toll_24px" aria-label="{{item.title}}"></md-icon>
             <div class="md-list-item-text">
-              <h3>Navigation Drawer</h3>
+              <h3>FAB Speed Dial</h3>
               
                 <h4>
-                  <p>A navigation drawer<br>
+                  <p>A floating action button speed dial<br>
                 </h4>
               
             </div>
@@ -583,14 +602,29 @@
         </a>
         <md-divider ng-show="!molecule"></md-divider>
       
-        <a href="/fabspeeddial/" ng-show="!molecule" class="animate-grow">
+        <a href="/navigationdrawer/" ng-show="!molecule" class="animate-grow">
           <md-list-item class="md-2-line" md-ink-ripple="#64ffda">
-            <md-icon md-svg-icon="action:ic_toll_24px" aria-label="{{item.title}}"></md-icon>
+            <md-icon md-svg-icon="action:ic_dashboard_24px" aria-label="{{item.title}}"></md-icon>
             <div class="md-list-item-text">
-              <h3>FAB Speed Dial</h3>
+              <h3>Navigation Drawer</h3>
               
                 <h4>
-                  <p>A floating action button speed dial<br>
+                  <p>A navigation drawer<br>
+                </h4>
+              
+            </div>
+          </md-list-item>
+        </a>
+        <md-divider ng-show="!molecule"></md-divider>
+      
+        <a href="/tabs/" ng-show="!molecule" class="animate-grow">
+          <md-list-item class="md-2-line" md-ink-ripple="#64ffda">
+            <md-icon md-svg-icon="action:ic_tab_24px" aria-label="{{item.title}}"></md-icon>
+            <div class="md-list-item-text">
+              <h3>Tabs</h3>
+              
+                <h4>
+                  <p>A set of tabs<br>
                 </h4>
               
             </div>
@@ -621,6 +655,7 @@
           <div flex-gt-sm="95" flex-gt-lg="80">
             <md-card>
               <md-toolbar class="md-accent" ng-show="!renameApp">
+  
   <md-list-item class="md-3-line">
     <md-icon class="md-hue-2 md-avatar" hide-sm md-svg-icon="action:ic_toll_24px"></md-icon>
     <div class="md-list-item-text">

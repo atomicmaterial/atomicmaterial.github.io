@@ -144,44 +144,118 @@ app.controller('AppCtrl', ['$scope', '$mdBottomSheet','$mdSidenav', '$mdDialog',
     });
   };
 
-  $scope.showAdd = function(ev) {
+  $scope.autocomplete = function(ev) {
     $mdDialog.show({
       controller: DialogController,
       template: `
-      <md-dialog aria-label="Form">
-        <md-content class="md-padding">
-          <md-sidenav layout="column" class="md-sidenav-left md-whiteframe-z2 md-navigation-drawer" md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')">
-            <md-toolbar class="md-hue-2 md-tall">
-              <span flex></span>
-              <div layout="row" layout-align="start center">
-                <md-icon class="md-avatar" md-svg-icon="avatars:svg-1"></md-icon>
-                <span flex></span>
-              </div>
-              <span flex></span>
-              <div class="md-body-2">Firstname Lastname</div>
-              <div class="md-body-1">email@domainname.com</div>
-            </md-toolbar>
-            <md-list>
-              <md-list-item class="md-2-line" ng-repeat="item in menu" role="link" ng-click="toggleSidenav('left')">
-                <md-icon md-svg-icon="{{item.icon}}" aria-label="{{item.title}}"></md-icon>
-                <div class="md-list-item-text">
-                  <span class="md-body-2">{{item.title}}</span>
-                </div>
-              </md-list-item>
-              <md-divider></md-divider>
-              <md-subheader  class="md-no-sticky">Management</md-subheader>
-              <md-list-item class="md-2-line" ng-repeat="item in admin" role="link" ng-click="toggleSidenav('left')">
-                <md-icon md-svg-icon="{{item.icon}}" aria-label="{{item.title}}"></md-icon>
-                <div class="md-list-item-text">
-                  <span class="md-body-2">{{item.title}}</span>
-                </div>
-              </md-list-item>
-            </md-list>
-          </md-sidenav>
-        </md-content>
-      </md-dialog>`,
+      <md-dialog aria-label="App" class="md-dialog-lg">
+        <md-toolbar class="md-tall bgc-red-900">
+          <div layout="row">
+            <md-button class="md-icon-button" ng-click="cancel()">
+              <md-icon md-svg-icon="navigation:ic_arrow_back_24px" alt="Back"></md-icon>
+            </md-button>
+            <span flex=""></span>
+            <md-icon flex="30" class="md-icon-xl pull-bottom-lg md-muted" md-svg-icon="core:assessment" alt="Icon"></md-icon>
+          </div>
+          <div class="md-toolbar-tools pull-top-xxl">
+            <span flex-gt-sm="10"></span>
+            <div layout="column">
+              <div class="md-display-1">Aster Analytics</div>
+              <div class="md-subhead push-bottom">Etiam consequat aliquam cursus. In sodales pretium ultrices.</div>
+            </div>
+          </div>
+          <md-button class="md-fab md-fab md-accent md-fab-bottom-right md-whiteframe-z2 pull-bottom-sm" ui-sref="app-create" ng-click="cancel()">
+            <md-icon md-svg-icon="core:cloud-download" alt="Icon"></md-icon>
+            <md-tooltip md-direction="left">Install App</md-tooltip>
+          </md-button>
+        </md-toolbar>
+         <md-dialog-content class="bgc-grey-100" flex>
+           <div hide-sm class="push-top-md"></div>
+           <div layout-gt-sm="row" layout-align-gt-sm="center start">
+             <div layout-gt-sm="row" flex-gt-sm="85">
+               <div flex-gt-sm="65">
+                 <md-card>
+                   <md-card-content>
+                     <p>Sticky content conversions shoptimization lean content conversation marketing dashboard Gen Y. Wheelhouse virality engagement. Integrated crowdsource flat design. Blogosphere The Cloud leverage. Download phablet brand awareness robust buzzword. Reaching out inbound drone. Seed money pass the clap organic reach goals for engagement verticals wheelhouse. Buzz engagement crowdsource intuitive reaching out lean content scalability.</p>
+                     <p>User-friendly lean content multiple points of entry drone taste makers dedication synergies. Quiet period virality council crowdsource lean content. Blogosphere long-tail omnichannel. Inbound B2C big data. Learnings ROI target influencer snackable content. Intuitive flat design branding leading the pack seamless.</p>
+                     <p>Ideation click bait optimized for social sharing. Branding seamless reaching out cross-device goals for engagement target audience organic reach. Multiple points of entry conversions B2C cross-device hashtag CRM meme. Funnel wheelhouse content curation market share viral CRM. Call-to-action low hanging fruit phablet engagement target audience. B2B pivot quiet period synergies. Call-to-action granular B2B virality low hanging fruit learnings target audience. Brand awareness pivot alignment leverage holistic. Buzzword disruptive tech shoptimization optimized for social sharing scalability crowdsource.</p>
+                   </md-card-content>
+                   <div layout="row" layout-align="start center" class="inset">
+                     <md-button class="md-raised md-accent" ui-sref="app-create" ng-click="controller.cancel()">Install App</md-button>
+                     <md-button class="md-raised">View Github Repo</md-button>
+                   </div>
+                 </md-card>
+               </div>
+               <div flex-gt-sm="35">
+                 <md-card>
+                   <md-list>
+                     <md-subheader class="md-no-sticky md-transparent">Required Resources</md-subheader>
+                     <md-list-item class="md-2-line">
+                       <md-icon md-svg-icon="core:view-module" alt="Icon" class="md-avatar"></md-icon>
+                       <div class="md-list-item-text">
+                         <h3>12</h3>
+                         <p>CPUs</p>
+                       </div>
+                     </md-list-item>
+                     <md-list-item class="md-2-line">
+                       <md-icon md-svg-icon="image:center-focus-weak" alt="Icon" class="md-avatar"></md-icon>
+                       <div class="md-list-item-text">
+                         <h3>24576</h3>
+                         <p>Memory</p>
+                       </div>
+                     </md-list-item>
+                     <md-list-item class="md-2-line">
+                       <md-icon md-svg-icon="core:settings-input-component" alt="Icon" class="md-avatar"></md-icon>
+                       <div class="md-list-item-text">
+                         <h3>409600</h3>
+                         <p>Disk</p>
+                       </div>
+                     </md-list-item>
+                     <md-list-item class="md-2-line">
+                       <md-icon md-svg-icon="core:settings-input-hdmi" alt="Icon" class="md-avatar"></md-icon>
+                       <div class="md-list-item-text">
+                         <h3>100</h3>
+                         <p>Ports</p>
+                       </div>
+                     </md-list-item>
+                     <md-divider></md-divider>
+                     <md-subheader class="md-no-sticky md-transparent">Info</md-subheader>
+                     <md-list-item class="md-2-line">
+                       <md-icon md-svg-icon="core:folder" alt="Icon" class="md-avatar"></md-icon>
+                       <div class="md-list-item-text">
+                         <h3>Analytics</h3>
+                         <p>Category</p>
+                       </div>
+                     </md-list-item>
+                     <md-list-item class="md-2-line">
+                       <md-icon md-svg-icon="core:today" alt="Icon" class="md-avatar"></md-icon>
+                       <div class="md-list-item-text">
+                         <h3>Jan 20, 2015</h3>
+                         <p>Last Updated</p>
+                       </div>
+                     </md-list-item>
+                     <md-divider></md-divider>
+                     <md-subheader class="md-no-sticky md-transparent">Creator</md-subheader>
+                     <md-list-item class="md-2-line">
+                       <md-icon md-svg-icon="core:account-box" alt="Icon" class="md-avatar"></md-icon>
+                       <div class="md-list-item-text">
+                         <h3>Johnny Ringo</h3>
+                         <p>owner</p>
+                       </div>
+                     </md-list-item>
+                   </md-list>
+                 </md-card>
+               </div>
+             </div>
+           </div>
+        </md-dialog-content>
+      </md-dialog>
+      `,
       targetEvent: ev,
     });
+  };
+  $scope.cancel = function() {
+    $mdDialog.cancel();
   };
 }]);
 
