@@ -147,14 +147,40 @@ app.controller('AppCtrl', ['$scope', '$mdBottomSheet','$mdSidenav', '$mdDialog',
   $scope.showAdd = function(ev) {
     $mdDialog.show({
       controller: DialogController,
-      templateUrl: '/demo/dialog.html',
-      // template: '<md-dialog aria-label="Form"> <md-content class="md-padding"> <form name="userForm"> <div layout layout-sm="column"> <md-input-container flex> <label>First Name</label> <input ng-model="user.firstName"> </md-input-container> <md-input-container flex> <label>Last Name</label> <input ng-model="user.lastName"> </md-input-container> </div> <md-input-container flex> <label>Message</label> <textarea ng-model="user.biography" columns="1" md-maxlength="150"></textarea> </md-input-container> </form> </md-content> <div class="md-actions" layout="row"> <span flex></span> <md-button ng-click="answer(\'not useful\')"> Cancel </md-button> <md-button ng-click="answer(\'useful\')" class="md-primary"> Save </md-button> </div></md-dialog>',
+      template: `
+      <md-dialog aria-label="Form">
+        <md-content class="md-padding">
+          <md-sidenav layout="column" class="md-sidenav-left md-whiteframe-z2 md-navigation-drawer" md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')">
+            <md-toolbar class="md-hue-2 md-tall">
+              <span flex></span>
+              <div layout="row" layout-align="start center">
+                <md-icon class="md-avatar" md-svg-icon="avatars:svg-1"></md-icon>
+                <span flex></span>
+              </div>
+              <span flex></span>
+              <div class="md-body-2">Firstname Lastname</div>
+              <div class="md-body-1">email@domainname.com</div>
+            </md-toolbar>
+            <md-list>
+              <md-list-item class="md-2-line" ng-repeat="item in menu" role="link" ng-click="toggleSidenav('left')">
+                <md-icon md-svg-icon="{{item.icon}}" aria-label="{{item.title}}"></md-icon>
+                <div class="md-list-item-text">
+                  <span class="md-body-2">{{item.title}}</span>
+                </div>
+              </md-list-item>
+              <md-divider></md-divider>
+              <md-subheader  class="md-no-sticky">Management</md-subheader>
+              <md-list-item class="md-2-line" ng-repeat="item in admin" role="link" ng-click="toggleSidenav('left')">
+                <md-icon md-svg-icon="{{item.icon}}" aria-label="{{item.title}}"></md-icon>
+                <div class="md-list-item-text">
+                  <span class="md-body-2">{{item.title}}</span>
+                </div>
+              </md-list-item>
+            </md-list>
+          </md-sidenav>
+        </md-content>
+      </md-dialog>`,
       targetEvent: ev,
-    })
-    .then(function(answer) {
-      $scope.alert = 'You said the information was "' + answer + '".';
-    }, function() {
-      $scope.alert = 'You cancelled the dialog.';
     });
   };
 }]);
